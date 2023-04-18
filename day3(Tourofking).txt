@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,m,n;
+    scanf("%d\n",&no_test);
+	while(no_test--){
+    scanf("%d",&n);
+    scanf("%d",&m);
+    printf("%d\n",5*n + m*7);
+	}
+	return 0;
+}
+

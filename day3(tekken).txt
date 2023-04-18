@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(void) {
+	int anna,bob,claudio,test_no;
+	scanf("%d\n",&test_no);
+	while(test_no--){
+	    scanf("%d",&anna);
+	     scanf("%d",&bob);
+	      scanf("%d",&claudio);
+	      if(anna>(abs(bob-claudio))){
+	          printf("YES\n");}
+	      else{
+	          printf("NO\n");
+	      }
+	}
+	return 0;
+}
+
