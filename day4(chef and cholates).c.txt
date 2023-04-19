@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test;
+	scanf("%d\n",&no_test);
+	while(no_test--){
+	    int no_five,no_ten,rate,no_cho;
+	    scanf("%d%d%d",&no_five,&no_ten,&rate);
+	    no_cho = (no_five*5+no_ten*10)/rate;
+	    printf("%d\n",no_cho);
+	}
+	return 0;
+}
+
