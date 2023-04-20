@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int no_test,no_drink,cap_jug,cost;
+    scanf("%d\n",&no_test);
+    while(no_test--){
+        scanf("%d%d%d",&no_drink,&cap_jug,&cost);
+        if(no_drink>cap_jug){
+            if(no_drink%cap_jug==0){
+                printf("%d\n",(no_drink/cap_jug)*cost);
+            }
+            else{
+                printf("%d\n",((no_drink/cap_jug)+1)*cost);
+            }
+            
+        }
+        else{
+            printf("%d\n",cost);
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,rupees;
+	scanf("%d\n",&no_test);
+	while(no_test--){
+	    abs(scanf("%d\n",&rupees));
+	    if(rupees<=100){printf("%d\n",rupees);}
+	    else if(rupees>100&&rupees<=1000){
+	        printf("%d\n",rupees - 25);}
+	    else if(rupees>1000&&rupees<=5000){
+	        printf("%d\n",rupees - 100);
+	    }
+	    else {
+	        printf("%d\n",rupees - 500);
+	    }
+	}
+	return 0;
+}
+
