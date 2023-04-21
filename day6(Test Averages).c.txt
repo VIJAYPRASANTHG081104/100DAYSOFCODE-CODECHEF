@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+    int no_test,sub_a,sub_b,sub_c;
+	void passorfail(){
+	    int first_two,mid_two,last_two;
+	    first_two = (sub_a + sub_b)/2;
+	    mid_two = (sub_b + sub_c)/2;
+	    last_two = (sub_a + sub_c)/2;
+	    if((first_two>=35)&&(mid_two>=35)&&(last_two>=35)){
+	        printf("Pass\n");
+	    }
+	    else{
+	        printf("Fail\n");
+	    }
+	}
+	scanf("%d",&no_test);
+	while(no_test--){
+	    scanf("%d%d%d\n",&sub_a,&sub_b,&sub_c);
+	    passorfail();
+	}
+	return 0;
+}
+
