@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+    int no_test,integer,x;
+    scanf("%d\n",&no_test);
+    while(no_test--){
+        scanf("%d",&integer);
+        if(integer%4==0){
+            printf("Good\n");
+        }
+        else{
+            printf("Not Good\n");
+        }
+    }
+	return 0;
+}
