@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,number;
+	scanf("%d\n",&no_test);
+	while(no_test--){
+	    scanf("%d\n",&number);
+	    printf("%d\n",number/2);
+	}
+	return 0;
+}

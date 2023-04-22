@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int no_test,people,rem_people,car = 1;
+    scanf("%d\n",&no_test);
+    while(no_test--){
+        scanf("%d\n",&people);
+        if(people<=4){
+            printf("%d\n",car);
+        }
+        else{
+            if(people%4 == 0){
+                printf("%d\n",people/4);
+            }
+            else{
+                rem_people = people%4;
+                printf("%d\n",(people/4)+1);
+            }
+        }
+    }
+
+    return 0;
+}
