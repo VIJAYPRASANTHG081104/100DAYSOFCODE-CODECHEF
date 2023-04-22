@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+    int no_test, speed, distance, b_time;
+    int min_time, delay_time;
+    scanf("%d\n", &no_test);
+    for(; no_test; no_test--){
+        scanf("%d %d %d", &speed, &distance, &b_time);
+            min_time = distance / speed;
+            delay_time = b_time - min_time;
+        if(delay_time<0){
+            printf("0\n");
+        }
+        else{
+            printf("%d\n", delay_time);
+        }
+    }
+    return 0;
+}
