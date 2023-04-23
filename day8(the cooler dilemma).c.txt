@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,rent_cooler,pur_cooler,months_cooler;
+	scanf("%d\n",&no_test);
+	while(no_test--){
+	    scanf("%d %d %d",&rent_cooler,&pur_cooler,&months_cooler);
+        if((rent_cooler*months_cooler)<pur_cooler){
+            printf("YES\n");
+        }
+        else{
+        printf("NO\n");
+    }
+	}
+	return 0;
+}
+
