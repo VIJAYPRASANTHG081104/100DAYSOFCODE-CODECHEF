@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,arr[4];
+	int i,count=0;
+	for(i = 0;i<4;i++){
+	    scanf("%d",&arr[i]);
+	}
+	for(int j = 0;j<4;j++){
+	    if(10<=arr[j]){
+	        count++;
+	    }
+	}
+	printf("%d\n",count);
+return 0;
+}
