@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int N,player1,player2,i,player0=0,player00=0;
+	scanf("%d",&N);
+	int score[N];
+	        for(int i=0;i<N;i++){
+	            scanf("%d %d",&player1,&player2);
+	            player0 = player0 + player1;
+	            player00 = player00 + player2; 
+	            score[i] = player0 - player00;
+	        }
+	        for(int j=1;j<N;++j){
+	            if((abs(score[0]))<(abs(score[j]))){
+	                score[0] = score[j];
+	            }
+	        }
+	    
+	    	if(score[0]>0){
+	            printf("%d %d",1,abs(score[0]));
+	        }
+	        else{
+	            printf("%d %d",2,abs(score[0]));
+	        }
+	return 0;
+}
