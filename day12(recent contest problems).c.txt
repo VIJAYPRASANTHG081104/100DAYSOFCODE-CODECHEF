@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+	int no_test,count=0,flag=0,compare;
+	scanf("%d\n",&no_test);
+	while(no_test--){
+	    int N;
+	    scanf("%d\n",&N);
+	    char event[100];
+	    count = 0;
+	    flag = 0;
+	    for(int i=0;i<N;i++){
+	     scanf("%s",event);
+	     compare = strcmp("START38",event);
+	     if(compare==0){
+	         count = count + 1;
+	     }
+	     else{
+	         flag = flag + 1;
+	     }
+        }
+	    printf("%d %d\n",count,flag);
+	}
+	return 0;
+}
+
