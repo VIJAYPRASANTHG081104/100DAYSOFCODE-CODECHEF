@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+	int Test,start,stop,i,count;
+	scanf("%d",&Test);
+	while(Test--){
+	    scanf("%d %d",&start,&stop);
+	    count = 0;
+	   // range = abs(stop - start);
+	   // int arr[range];
+	    for(i = start;i<=stop;i++){
+	    if((i%10 == 2)||(i%10 == 3)||(i%10 == 9)){
+	        count++;
+	    }
+	    
+	}
+	    printf("%d\n",count);
+	}
+	return 0;
+}
+
