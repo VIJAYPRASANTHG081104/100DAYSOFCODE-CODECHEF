@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+	int test,A,B,C;
+	scanf("%d",&test);
+	while(test--){
+	    scanf("%d %d %d",&A,&B,&C);
+	    if(A<B && A<C){
+	        printf("Draw\n");
+	    }
+	    else{
+	        if(B>C){
+	            printf("Alice\n");
+	        }
+	        else{
+	            printf("Bob\n");
+	        }
+	    }
+	}
+	return 0;
+}
+

@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+	int test,tyres;
+	scanf("%d",&test);
+	while(test--){
+	   // int count = 0;
+	    scanf("%d",&tyres);
+	    if(tyres%4==0||tyres%4==1){
+	       // count++;
+	       printf("NO\n");
+	    }
+	    else{
+	       printf("YES\n");
+	    }
+	}
+	return 0;
+}
+
