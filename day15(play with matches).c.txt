@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int A,B,C;
+	    scanf("%d %d",&A,&B);
+	    C = A + B;int arr[10];int D = 0;int rem;
+	    while(C != 0){rem = C%10;
+	        if(rem == 0 || rem == 6 || rem == 9){
+	            D = D + 6;
+	        }else if( rem == 1){
+	            D = D + 2;
+	        }else if( rem == 2 || rem == 3 || rem == 5){
+	            D = D + 5;
+	        }else if (rem == 4){
+	            D = D + 4;
+	        }else if(rem == 7){
+	            D = D + 3;
+	        }else if( rem == 8 ){D = D + 7;}C = C/10;}printf("%d\n",D);}return 0;}
+

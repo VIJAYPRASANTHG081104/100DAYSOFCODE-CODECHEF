@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+	int no_test,size,height;
+	scanf("%d",&no_test);
+	while(no_test--){
+	    scanf("%d %d",&size,&height);
+	    int arr[size];
+	    int count = 0;
+	    for(int i = 0 ;i < size;i++){
+	        scanf("%d",&arr[i]);
+	        if(height<arr[i]){
+	           count++;   
+	        }
+	    }
+	    printf("%d\n",count);
+	}
+	return 0;
+}
+
