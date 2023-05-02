@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,t;
+    scanf("%d",&t);
+    for(n=0;n<t;n++)
+    {
+        int count=0;
+        char s[1000];
+
+        scanf("%s",s);
+        int s_length = strlen(s);
+        for(i=0;i<s_length;i++)
+        {
+            if((s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')&&
+               (s[i+1]=='a'||s[i+1]=='e'||s[i+1]=='i'||s[i+1]=='o'||s[i+1]=='u')&&
+                (s[i+2]=='a'||s[i+2]=='e'||s[i+2]=='i'||s[i+2]=='o'||s[i+2]=='u'))
+                c++;
+        }
+        if(count!=0)
+            printf("happy\n");
+        else
+            printf("sad\n");
+    }
+}
