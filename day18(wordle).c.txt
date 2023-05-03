@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<string.h>
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    char word1[100],word2[200];
+	    scanf("%s",word1);
+	    int len_word1 = strlen(word1);
+	    scanf("%s",word2);
+	    int len_word2 = strlen(word2);
+	    for(int i = 0;i<len_word1;i++){
+	            if(word1[i] == word2[i]){
+	                printf("G");
+	            }
+	            else{
+	                printf("B");
+	            }
+	        
+	    }
+	    printf("\n");
+	}
+	return 0;
+}
+
