@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int N;
+	    scanf("%d",&N);
+	    char s[N];
+	    scanf("%s",s);
+	    int half = N/2;
+	    int count = 1;
+	    for(int i = 0;i<N/2;i++){
+	        if(s[i]!=s[half]){
+	            count = 0;
+	            break;
+	        }
+	        half++;}
+	        if(count){
+	            printf("YES\n");
+	        }
+	        else{
+	            printf("NO\n");
+	        }
+}
+	return 0;
+}
+
