@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int test;
+    scanf("%d",&test);
+    for(int i = 0;i<test;i++){
+        int size;
+        scanf("%d",&size);
+        int S[size];
+        int count = 0;
+        for(int i = 0;i<size;i++){
+            scanf("%d",&S[i]);
+        }
+        for(int j = 0;j<size;j++){
+            if(S[j]!=S[j+1]){
+                count++;
+            }
+        }
+        printf("%d\n",count);
+}
+    return 0;
+}
