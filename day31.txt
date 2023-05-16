@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	int follow,following;
+	scanf("%d",&test);
+	while(test--){
+	    scanf("%d %d",&following,&follow);
+	    if(following>10*follow){
+	        printf("YES\n");
+	    }
+	    else{
+	        printf("NO\n");
+	    }
+	}
+	return 0;
+}
+
