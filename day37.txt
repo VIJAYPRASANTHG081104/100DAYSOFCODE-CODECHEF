@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        float a,b,c,d,e;
+        scanf("%f %f %f %f %f",&a,&b,&c,&d,&e);
+        float x=b*(a/d);
+        float y=c*(a/e);
+        if(x<y){
+            printf("PETROL\n");
+        }
+        if(x>y){
+            printf("DIESEL\n");
+        }
+        if(x==y){
+            printf("ANY\n");
+        }
+    }
+    return 0;
+}
