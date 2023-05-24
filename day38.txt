@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(void) 
+{
+    int n,X,Y,k,a;
+    scanf("%d",&n);
+    while(n--)
+      {
+        scanf("%d %d",&X,&Y);
+        k = X*X*X*X+4*Y*Y;
+        a = 4*X*X*Y;
+        if(k==a)
+        printf("\nYES");
+        else
+        printf("\nNO");
+       
+      }
+	return 0;
+}
