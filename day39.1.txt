@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int N,count=0,flag=0;
+	    scanf("%d",&N);
+	    char arr1[N+1],arr2[N+1];
+        scanf("%s",arr1);
+        scanf("%s",arr2);
+	    for(int k=0;k<N;k++){
+	        if(arr1[k]=='1'){
+	            count++;
+	        }
+	    }
+	    for(int l=0;l<N;l++){
+	        if(arr2[l]=='1'){
+	            flag++;
+	        }
+	    }
+	    if(count==flag){
+	        printf("YES\n");
+	    }
+	    else{
+	        printf("NO\n");
+	    }
+	}
+	return 0;
+}
+
