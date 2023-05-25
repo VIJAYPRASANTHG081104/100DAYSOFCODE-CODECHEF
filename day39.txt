@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+    int test;
+    scanf("%d", &test);
+    
+    while (test--) {
+        int N, K;
+        scanf("%d %d", &N, &K);
+        int arr[N];
+        
+        for (int i = 0; i < N; i++) {
+            scanf("%d", &arr[i]);
+        }
+        
+        int maxSum = 0;
+        for (int i = 0; i <= N - K; i++) {
+            int sum = 0;
+            for (int j = i; j < i + K; j++) {
+                sum += arr[j];
+            }
+            if (sum > maxSum) {
+                maxSum = sum;
+            }
+        }
+        
+        printf("%d\n", maxSum);
+    }
+    
+    return 0;
+}
