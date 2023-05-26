@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main(void) {
+    int test;
+    scanf("%d", &test);
+    
+    while (test--) {
+        int N, X;
+        scanf("%d %d", &N, &X);
+        int count = 1;
+        char arr[N];
+        int backstep = X, forwardstep = X;
+        scanf("%s", arr);
+        
+        for (int i = 0; i < N; i++) {
+            if (arr[i] == 'R') {
+                X++;
+            } else if (arr[i] == 'L') {
+                X--;
+            }
+            
+            if (X < backstep) {
+                count++;
+                backstep = X;
+            } else if (X > forwardstep) {
+                count++;
+                forwardstep = X;
+            }
+        }
+        
+        printf("%d\n", count);
+    }
+    
+    return 0;
+}
