@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void) {
+    int test;
+    scanf("%d", &test);
+
+    while (test--) {
+        int N, count = 0, i = 0;
+        scanf("%d", &N);
+        char S[N];
+        scanf("%s", S);
+
+        for (i = 0; i < N; i++) {
+            if (S[i] == '.') {
+                continue;
+            } else if (S[i] == 'H') {
+                count++;
+            } else if (S[i] == 'T' && count == 1) {
+                count = 0;
+            } else {
+                break;
+            }
+        }
+
+        if (i == N && count == 0) {
+            printf("Valid\n");
+        } else {
+            printf("Invalid\n");
+        }
+    }
+
+    return 0;
+}
