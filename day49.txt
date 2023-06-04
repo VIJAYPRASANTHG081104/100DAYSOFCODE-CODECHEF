@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int c1,c2;
+	    int r1,r2;
+	    scanf("%d %d",&c1,&c2);
+	    scanf("%d %d",&r1,&r2);
+	    if(r1>=c1 && r2>=c2){
+	        printf("POSSIBLE\n");
+	    }
+	    else{
+	        printf("IMPOSSIBLE\n");
+	    }
+	}
+	return 0;
+}
