@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+        int N,count=0,flag=0;
+        scanf("%d",&N);
+        char s[N];
+        scanf("%s",s);
+        for(int i=0;i<N-1;i++){
+            if(s[i]=='1'&&s[i+1]=='1'){
+                count=1;
+                break;
+            }
+            else if(s[i]=='0'){
+                flag++;
+                
+            }
+        }
+       
+        if(count==1){
+            printf("2\n");
+        }
+        
+        else if(flag == N-1 && s[N-1]=='0'){
+            printf("0\n");
+        }
+        else{
+            printf("1\n");
+        }
+	}
+	return 0;
+}
