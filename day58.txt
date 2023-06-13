@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	   int A,B,C;
+	   scanf("%d %d %d",&A,&B,&C);
+	   if(A==B+C||B==C+A||C==A+B){
+	       printf("yes\n");
+	   }
+	   else{
+	       printf("no\n");
+	   }
+	}
+	return 0;
+}
+
