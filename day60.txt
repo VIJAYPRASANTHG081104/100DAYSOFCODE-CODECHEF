@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<string.h>
+int main(void) {
+    int test;
+    scanf("%d",&test);
+    while(test--){
+        char str[1001];
+        scanf("%s",str);
+        int number[26]={0},count=0;
+        for(int i = 0;i<strlen(str)/2;i++){
+            int index = str[i]-'a';
+            number[index]++;
+        }
+        for(int j = (strlen(str)+1)/2;j<strlen(str);j++){
+            int index = str[j]-'a';
+            number[index]--;
+        }
+        for(int i = 0;i<26;i++){
+            if(number[i]!=0){
+                count++;
+            }
+        }
+        (count>0)?printf("NO\n"):printf("YES\n");
+    }
+	return 0;
+}
+
