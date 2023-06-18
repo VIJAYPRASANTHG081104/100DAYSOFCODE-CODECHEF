@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h> 
+
+int main(void) {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--)
+	{
+    	int num[100],a[26]={0},sum=0;
+    	char s[100000];
+    	for(int i=0;i<26;i++)
+    	scanf("%d",&num[i]);
+    	scanf("%s",s);
+    	int l=strlen(s);
+    	for(int i=0;i<l;i++)
+    	{
+    	    a[s[i]-97]++;
+    	    
+    	}
+    	for(int i=0;i<26;i++)
+    	{
+    	  if(a[i]==0)
+    	  sum=sum+num[i];
+    	}
+    	printf("%d\n",sum);
+	}	
+	
+	return 0;
+}
