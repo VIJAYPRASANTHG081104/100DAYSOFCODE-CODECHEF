@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+	int i,j,t;
+scanf("%d",&t);
+for(i=1;i<=t;i++)
+{
+    int n,a=0,b=0,c=0,d=0,e=0;
+    scanf("%d",&n);
+    for(j=1;j<=n;j++)
+    {
+    char str[20];
+    scanf("%s",str);
+    if (strcmp(str, "cakewalk") == 0)
+    a++;
+    else if (strcmp(str, "simple") == 0)
+    b++;
+    else if (strcmp(str, "easy") == 0)
+    c++;
+    else if (strcmp(str,"medium")==0||strcmp(str,"easy-medium")==0)
+    d++;
+    else if(strcmp(str,"medium-hard")==0||strcmp(str,"hard")==0)
+    e++;
+    }
+    if(a>=1 && b>=1 && c>=1 && d>=1 && e>=1)
+    printf("Yes\n");
+    else
+    printf("No\n");
+}
+	return 0;
+}
+
