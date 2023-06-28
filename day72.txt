@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int count=0,flag=0;
+	    char num[100000];
+	    scanf("%s",num);
+	    for(int i = 0;i<strlen(num);i++){
+	        if(num[i]=='1') {count++;}
+	        else {flag++;}
+	    }
+	  printf("%s\n", (count == 1 || flag == 1) ? "Yes" : "No");
+
+	}
+	return 0;
+}
+
