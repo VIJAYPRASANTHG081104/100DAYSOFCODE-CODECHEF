@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int N;scanf("%d",&N);
+	    int arr[N];for(int i = 0; i< N;i++){
+	        scanf("%d",&arr[i]);
+	    }
+	    int count = 1,max=1,min=N;
+	    for(int i = 1; i < N ; i++){
+	        if(arr[i] - arr[i-1] <= 2){
+	            count++;
+	        }
+	        else{
+	            if(count>max){
+	                max=count;
+	            }
+	            if(count<min){
+	                min=count;
+	            }
+	            count=1;
+	        }
+	    }
+	    if(count>max)max=count;
+	    if(count<min)min=count;
+	    printf("%d %d\n",min,max);
+	}
+	return 0;
+}
+
