@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void) {
+    int test;
+    scanf("%d",&test);
+    while(test--){
+        int N,K,M,count=0,flag=0;
+        scanf("%d %d %d",&N ,&M, &K);
+        int arr[N];
+        for(int i = 0; i < N; i++){
+            scanf("%d",&arr[i]);
+        }
+        for(int i = 0 ; i <  N;i++){
+            if(arr[i] == 1){
+                count++;
+            }
+        }
+        for(int i = 0 ; i < M  ; i ++){
+            if(arr[i] == 1){
+                flag++;
+            }
+        }
+        if(count == N)printf("100\n");
+        else if(flag == M)printf("%d\n",K);
+        else printf("0\n");
+    }
+	return 0;
+}
+
