@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        int N, K, count = 0;
+        scanf("%d %d", &N, &K);
+        int votes[N];
+        int zero[N+1];
+        for (int i = 0; i <= N; i++) {
+            zero[i] = 0;
+        }
+        for (int i = 0; i < N; i++) {
+            scanf("%d", &votes[i]);
+        }
+        for (int i = 0; i < N; i++) {
+            zero[votes[i]]++;
+        }
+        for (int i = 0; i < N; i++) {
+            if (votes[i] != i + 1 && zero[i+1] >= K) {
+                count++;
+            }
+        }
+        printf("%d\n", count);
+    }
+    return 0;
+}
