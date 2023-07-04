@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void) {
+    int T;
+    scanf("%d", &T); 
+    
+    while (T--) {
+        int n;
+        scanf("%d", &n);  
+        
+        int p[n];
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &p[i]);
+        }
+        
+        int loc1,locn;
+        for (int i = 0; i < n; i++) {
+            if (p[i] == 1) {
+                loc1 = i;
+            }
+            if (p[i] == n) {
+                locn = i;
+            }
+        }
+        
+        int result = n - 1 - locn + loc1 - (loc1 > locn);
+        printf("%d\n", result);
+    }
+    
+    return 0;
+}
