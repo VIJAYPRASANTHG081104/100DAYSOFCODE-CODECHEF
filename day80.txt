@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int t,d,u,a,b,p,q,rh[5000];
+	scanf("%d",&t);
+	for(int j=0;j<t;j++){
+	    
+	    scanf("%d %d %d %d",&a,&b,&p,&q);
+	    if(a==p && b==q){
+	        rh[j]=0;
+	    }
+	    else {
+	     d=((a+b)%2==0)?1:0;
+	     u=((q+p)%2==0)?1:0;
+	        if(d==u)
+	        rh[j]=2;
+            else
+            rh[j]=1;
+	            
+	            
+	            
+	        }
+	    }
+	    for(int k=0;k<t;k++){
+	        printf("%d\n",rh[k]);
+	    }
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	
+	return 0;
+}
+
