@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include<string.h>
+
+int main(void) {
+	int test;
+	scanf("%d",&test);
+	while(test--){
+	    int size;
+	    scanf("%d",&size);
+	    char S[1001];
+	    int a[4]={0},c=0,e=0;
+	    for(int i = 0;i < size;i++){
+	        scanf("%s",S);
+	        int length = strlen(S);
+	        for(int j = 0;j < length;j++){
+	            switch(S[j]){
+	                case 'c' : c++;break;
+	                case 'e' : e++;break;
+	                case 'o' : a[0]++;break;
+	                case 'd' : a[1]++;break;
+	                case 'h' : a[2]++;break;
+	                case 'f' : a[3]++;break;
+	            }
+	        }
+	    }
+	    for(int i = 0;i<4;i++){
+	        if(a[0]>a[i]){
+	            a[0]=a[i];
+	        }
+	    }
+	    if(c>e){
+	        c=e;
+	    }
+	    c /= 2;
+	    (a[0]<c)?printf("%d\n",a[0]):printf("%d\n",c);
+	    
+	}
+	return 0;
+}
+
