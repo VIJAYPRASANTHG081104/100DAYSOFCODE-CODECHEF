@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main(void) {
+    int test;
+    scanf("%d",&test);
+    while(test--){
+        char s[101];
+        scanf("%s",s);
+        int len = strlen(s);
+        int a[26]={0},sum=0;
+        for(int i = 0;i<len;i++){
+            a[s[i]-'a']++;
+        }
+        int p=1;
+        for(int i=0;i<26;i++){
+            if(a[i]!=0){
+                sum += ((i+1)*a[i]*(a[i]+p*2-1)/2);
+                p+=a[i];
+            }
+        }
+        printf("%d\n",sum);
+    }
+	return 0;
+}
+
