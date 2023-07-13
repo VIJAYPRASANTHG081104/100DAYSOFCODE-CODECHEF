@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
+int main(void) {
+	int T;
+	scanf("%d",&T);
+	while(T>0)
+	{
+	    int i,n,a[1440]={},m=0,k;
+	    scanf("%d",&n);
+	    
+	    for(i=0;i<n*2;i++) 
+	    {scanf("%d",&k);
+	    a[k]++; if(a[k]>m) m=a[k];
+        
+	    }
+         printf("%d\n",m);
+	    T--;
+	}
+	return 0;
+}
