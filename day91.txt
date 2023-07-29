@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    
+    while (t--) {
+        int N;
+        scanf("%d", &N);
+        int inside = 0;
+        int *total = calloc(N, sizeof(int));
+        bool *is_inside = calloc((N + 1), sizeof(bool));
+        
+        for (int i = 0; i < N; i++) {
+            scanf("%d", &total[i]);
+        }
+        
+        int max_people = 0;
+        
+        for (int i = 0; i < N; i++) {
+            if (is_inside[total[i]] == false) {
+                is_inside[total[i]] = true;
+                inside++;
+            } else {
+                is_inside[total[i]] = false;
+                inside--;
+            }
+            
+            if (inside > max_people) {
+                max_people = inside;
+            }
+        }
+        
+        printf("%d\n", max_people);
+        
+        free(total);
+        free(is_inside);
+    }
+    
+    return 0;
+}
