@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int T;
+    scanf("%d",&T);
+    while(T--){
+        int N,M,X,Y;
+        scanf("%d %d",&N,&M);
+        scanf("%d %d",&X,&Y);
+        char (*problems)[M+1] = malloc(N*(M+1) * sizeof(char));
+        for(int i = 0;i < N;i++){
+            scanf("%s",problems[i]);
+        }
+        
+        result(N,M,X,Y,problems);
+        free(problems);
+    }
+    return 0;
+}
+int result(int N,int M,int X,int Y,char problems[][M+1]){
+    int *pass = malloc(N*sizeof(int));
+    for(int i = 0;i <N;i++){
+        int completed = 0,partially = 0;
+        for(int j = 0;j < M;j++){
+            if(problems[i][j]=='F'){
+                completed++;
+            }
+            else if(problems[i][j]=='P'){
+                partially++;
+            }
+        }
+        if(completed>=X || completed>=(X-1)&&partially >= Y){
+            pass[i]=1;
+        }
+        else{
+            pass[i]=0;
+        }
+    }
+    for(int i = 0;i < N;i++){
+        printf("%d",pass[i]);
+    }
+    printf("\n");
+}
